@@ -1,0 +1,23 @@
+{
+  "name": "cnpj-validation",
+  "version": "1.0.0",
+  "description": "A simple cnpj validation in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriciomsdev/simple-cnpj-validation-js.git"
+  },
+  "keywords": [
+    "cnpj",
+    "valdiation"
+  ],
+  "author": "Fabricio magalhães Sena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabriciomsdev/simple-cnpj-validation-js/issues"
+  },
+  "homepage": "https://github.com/fabriciomsdev/simple-cnpj-validation-js#readme"
+}

@@ -2,34 +2,25 @@
     Based on https://www.geradorcnpj.com/javascript-validar-cnpj.htm
 */
 
-export class CNPJValidator {
-    cnpj = '';
-    knownInvalidValues = [
-        "00000000000",
-        "11111111111",
-        "22222222222",
-        "33333333333",
-        "44444444444",
-        "55555555555",
-        "66666666666",
-        "77777777777",
-        "88888888888",
-        "99999999999",
-    ];
-
-    setCNPJ(cnpj) {
-        this.cnpj = cnpj;
-        return this;
-    }
-
-    validate(cnpj = null) {
+export const validateCNPJ = (cnpj) => {
         var size, numbers, digits, sum, pos;
-        cnpj = !cnpj ? this.cnpj : cnpj;
-        cnpj = cnpj.replace(/[^\d]+/g, '');
-
+        cnpj = String(cnpj).replace(/[^\d]+/g, '');
+        const knownInvalidValues = [
+            "00000000000",
+            "11111111111",
+            "22222222222",
+            "33333333333",
+            "44444444444",
+            "55555555555",
+            "66666666666",
+            "77777777777",
+            "88888888888",
+            "99999999999",
+        ];
         const hasAnIncorrectLenght = cnpj.length != 14
         const isThereInknownInvalidValues = this.knownInvalidValues.indexOf(cnpj) > -1;
         const isEmpty = cnpj == '';
+
 
         if (hasAnIncorrectLenght || isThereInknownInvalidValues || isEmpty) {
             return false;
@@ -63,7 +54,7 @@ export class CNPJValidator {
         for (var i = size; i >= 1; i--) {
             sum += numbers.charAt(size - i) * pos--;
             if (pos < 2) {
-                pos = 9;   
+                pos = 9;
             }
         }
 
@@ -73,9 +64,4 @@ export class CNPJValidator {
         }
 
         return true;
-    }
-}
-
-export const validateCNPJ = (cnpj) => {
-    return (new CNPJValidator()).setCNPJ(cnpj).validate();
 }
