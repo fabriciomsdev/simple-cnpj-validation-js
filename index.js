@@ -18,7 +18,7 @@ export const validateCNPJ = (cnpj) => {
             "99999999999",
         ];
         const hasAnIncorrectLenght = cnpj.length != 14
-        const isThereInknownInvalidValues = this.knownInvalidValues.indexOf(cnpj) > -1;
+        const isThereInknownInvalidValues = knownInvalidValues.indexOf(cnpj) > -1;
         const isEmpty = cnpj == '';
 
 

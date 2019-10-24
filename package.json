@@ -1,6 +1,6 @@
 {
   "name": "cnpj-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple cnpj validation in js",
   "main": "index.js",
   "scripts": {
